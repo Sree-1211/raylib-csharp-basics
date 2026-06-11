@@ -1,4 +1,5 @@
 ﻿using Raylib_cs;
+
 namespace Prathyaksh
 {
     
@@ -20,8 +21,35 @@ namespace Prathyaksh
         }
         public void Run()
         {
-           
+           while(!Raylib.WindowShouldClose())
+           {
+               Input();
+               Update();
+               Render();
+           }
+            CloseUp();
+        }
 
+        private void CloseUp()
+        {
+            Raylib.CloseWindow();
+        }
+
+        private void Input()
+        {
+            
+        }
+
+        private void Update()
+        {
+
+        }
+
+        private void Render()
+        {
+            Raylib.BeginDrawing();
+            Raylib.ClearBackground(Color.DarkGray);
+            Raylib.EndDrawing();
         }
     }
 }
